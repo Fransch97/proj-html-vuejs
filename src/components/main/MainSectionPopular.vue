@@ -6,7 +6,15 @@
     </div>
     <div class="content d-flex">
       <div class="active-card py-3 px-3">
-        <img :src="require(`../../assets/img/${activeCardObj.img}.jpg`)" alt="">
+        <div class="img-container ">
+          <div class="overlay position-absolute justify-content-center align-items-center flex-column ">
+            <div class="link my-3">
+                <font-awesome-icon icon="fa-solid fa-link" />
+              </div>
+            <h5>{{activeCardObj.title}}</h5>
+          </div>
+          <img :src="require(`../../assets/img/${activeCardObj.img}.jpg`)" alt="">
+        </div>
         <div class="active-content">
           <h5>{{activeCardObj.title}}</h5>
           <span class="tags">{{activeCardObj.tags}}</span>
@@ -20,8 +28,15 @@
           v-for="(item, index) in filterItems"
           :key="`card-pop${index}`" 
           class="item py-3 px-3">
-          
-          <img  class="" :src="require(`../../assets/img/${item.img}.jpg`)" alt="">
+          <div class="img-container">
+            <div class="overlay position-absolute justify-content-center align-items-center text-center flex-column">
+              <div class="link">
+                <font-awesome-icon icon="fa-solid fa-link" />
+              </div>
+            <h5>{{item.title}}</h5>
+            </div>
+            <img  class="" :src="require(`../../assets/img/${item.img}.jpg`)" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -114,6 +129,20 @@ export default {
           border-radius: 3px;
         }
       }
+        .img-container{
+          position: relative;
+            &:hover .overlay{
+              display: flex;
+            }
+          .overlay{
+            font-family: 'Vidaloka', serif;
+            height: 100%;
+            width: 100%;
+            color: white;
+            background: linear-gradient(to bottom,  #ff5f029f, #fc7525);
+            display: none;
+          }
+      }
       img{
         width: 100%;
       }
@@ -122,6 +151,20 @@ export default {
       max-width: 50%;
       .item{
         width: 50%;
+        .img-container{
+          position: relative;
+            &:hover .overlay{
+              display: flex;
+            }
+          .overlay{
+            font-family: 'Vidaloka', serif;
+            height: 100%;
+            width: 100%;
+            color: white;
+            background: linear-gradient(to bottom,  #ff5f029f, #fc7525);
+            display: none;
+          }
+        }
         img{
           width: 100%;
         }

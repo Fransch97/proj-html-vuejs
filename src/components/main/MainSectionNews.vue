@@ -25,7 +25,15 @@
        <div class="left">
           <div class="new-recipes pb-4">
             <div class="active-recipe py-4 ">
-              <img :src="require(`../../assets/img/${defaultNews.img}.jpg`)" :alt="defaultNews.title">
+              <div class="img-container ">
+                <div class="overlay position-absolute justify-content-center align-items-center flex-column ">
+                  <div class="link my-3">
+                      <font-awesome-icon icon="fa-solid fa-link" />
+                    </div>
+                  <h5>{{defaultNews.title}}</h5>
+                </div>
+                <img :src="require(`../../assets/img/${defaultNews.img}.jpg`)" :alt="defaultNews.title">
+              </div>
               <div class="active-content">
                 <h5 >{{defaultNews.title}}</h5>
                 <span class="tags">{{defaultNews.date}}</span>
@@ -41,7 +49,15 @@
 
           <div class="all-new d-flex justify-content-between flex-wrap text-center ">
             <div v-for="news in allnews" :key="`news-${news.id}`" class="news-card pb-5 mb-5">
+            <div class="img-container ">
+                <div class="overlay position-absolute justify-content-center align-items-center flex-column ">
+                  <div class="link my-3">
+                      <font-awesome-icon icon="fa-solid fa-link" />
+                    </div>
+                  <h5>{{news.title}}</h5>
+                </div>
               <img :src="require(`../../assets/img/${news.img}.jpg`)" alt="">
+            </div>
               <h5>{{news.title}}</h5>
               <span class="tags">{{news.date}}</span>
             </div>
@@ -196,4 +212,18 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/style/global";
 @import "../../assets/style/mainSectionNews";
+.img-container{
+          position: relative;
+            &:hover .overlay{
+              display: flex;
+            }
+          .overlay{
+            font-family: 'Vidaloka', serif;
+            height: 100%;
+            width: 100%;
+            color: white;
+            background: linear-gradient(to bottom,  #ff5f029f, #fc7525);
+            display: none;
+          }
+}
 </style>

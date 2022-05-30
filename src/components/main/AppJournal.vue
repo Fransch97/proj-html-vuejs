@@ -6,12 +6,21 @@
          <h5>foodie journal</h5>
          <div class="line"></div>
        </div>
-         <div class="content d-flex">
-           <div v-for="(journal,index) in journals" :key="`journal-${index}`" class="card-sc p-4 text-center">
-             <img class="mb-4 " :src="require(`../../assets/img/${journal.img}.jpg`)" alt="">
-             <h4>{{journal.title}}</h4>
-             <span>{{journal.credits}}</span>
-           </div>
+        <div class="content d-flex">
+          <div v-for="(journal,index) in journals" :key="`journal-${index}`" class="card-sc p-4 text-center">
+            <div class="img-container ">
+              <div class="overlay position-absolute justify-content-center align-items-center flex-column ">
+                <div class="link my-3">
+                    <font-awesome-icon icon="fa-solid fa-link" />
+                  </div>
+                <h5>{{journal.title}}</h5>
+              </div>
+              <img  :src="require(`../../assets/img/${journal.img}.jpg`)" alt="">
+            </div>
+            <h4 class="mt-4 ">{{journal.title}}</h4>
+            <span>{{journal.credits}}</span>
+
+          </div>
            
          </div>
       </div>
@@ -68,6 +77,20 @@ export default {
       }
       .card-sc{
         width: calc(100% / 3);
+        .img-container{
+          position: relative;
+            &:hover .overlay{
+              display: flex;
+            }
+          .overlay{
+            font-family: 'Vidaloka', serif;
+            height: 100%;
+            width: 100%;
+            color: white;
+            background: linear-gradient(to bottom,  #ff5f029f, #fc7525);
+            display: none;
+          }
+        }
         img{
           width: 100%;
         }

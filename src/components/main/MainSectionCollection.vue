@@ -55,11 +55,19 @@ export default {
         .collect-item{
             background-color: white ;
             width: calc(100% / 4 - 3%);
+            font-weight: 600;
             img{
                 width: 33%;
             }
             p{
                 text-transform: uppercase;
+                padding: 10px;
+                margin: 0 5px 5px 5px;
+                cursor: pointer;
+                &:hover{ 
+                    background-color: #fc7525;
+                    color: white;
+                }
             }
         }
     }

@@ -27,7 +27,17 @@ export default {
 h1{
  font-family: 'Vidaloka', serif;
 }
-
+.link{
+  color: $org-color;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
 html{
   background-color: white;
 }
