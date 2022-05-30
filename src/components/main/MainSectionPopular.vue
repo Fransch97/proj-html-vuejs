@@ -91,6 +91,9 @@ export default {
         background-color: white;
         padding: 40px;
         flex-grow: 1;
+        h5{ 
+          font-family: 'Vidaloka', serif;
+        }
         .tags{
           font-family: $font-cat;
           font-size: 14px;

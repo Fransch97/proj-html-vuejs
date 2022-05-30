@@ -7,8 +7,8 @@
          <div class="line"></div>
        </div>
          <div class="content d-flex">
-           <div v-for="(journal,index) in journals" :key="`journal-${index}`" class="card-sc p-4">
-             <img class="mb-4" :src="require(`../../assets/img/${journal.img}.jpg`)" alt="">
+           <div v-for="(journal,index) in journals" :key="`journal-${index}`" class="card-sc p-4 text-center">
+             <img class="mb-4 " :src="require(`../../assets/img/${journal.img}.jpg`)" alt="">
              <h4>{{journal.title}}</h4>
              <span>{{journal.credits}}</span>
            </div>
@@ -63,6 +63,9 @@ export default {
       
     }
     .content{
+      h4{
+        font-family: 'Vidaloka', serif;
+      }
       .card-sc{
         width: calc(100% / 3);
         img{

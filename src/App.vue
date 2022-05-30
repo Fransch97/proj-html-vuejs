@@ -23,7 +23,11 @@ export default {
 
 <style lang="scss">
 @import "./assets/style/global";
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
 h1{
-  font-family: $font-cat;
+ font-family: 'Vidaloka', serif;
+}
+html{
+  background-color: white;
 }
 </style>

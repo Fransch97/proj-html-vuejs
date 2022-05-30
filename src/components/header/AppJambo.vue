@@ -48,7 +48,7 @@ export default {
         position: relative;
         h1{
             font-size: 40px;
-            font-family: Arial, Helvetica, sans-serif
+            font-family: 'Vidaloka', serif;
         }
         span{ 
             text-transform: uppercase;
