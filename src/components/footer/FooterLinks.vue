@@ -88,6 +88,10 @@ export default {
             font-size: 20px;
             margin-left: - 20px;
         }
+        i{
+            color:#afafaf;
+            font-size: 20px;
+        }
         img{
             width: 100%;
         }
