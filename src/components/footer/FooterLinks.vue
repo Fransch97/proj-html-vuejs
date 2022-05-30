@@ -28,16 +28,16 @@
     <ul class="border-sc">
         <li><p class="title">contact</p></li>
         <li class="py-2">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>775 New York Ave, Brooklyn, Kings, New York 11203</span>
+            <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
+            <span> 775 New York Ave, Brooklyn, Kings, New York 11203</span>
         </li>
         <li class="py-2">
-            <i class="fa-solid fa-phone-flip"></i>
-            <span>+ 0100-505-0000</span>
+            <font-awesome-icon class="icon" icon="fa-solid fa-phone-flip" />
+            <span> + 0100-505-0000</span>
         </li>
         <li class="py-2">
-            <i class="fa-solid fa-envelope"></i>
-            <span>info@your-donain.com</span>
+            <font-awesome-icon class="icon" icon="fa-solid fa-envelope" />
+            <span> info@your-donain.com</span>
         </li>
     </ul>
 
@@ -83,6 +83,11 @@ export default {
 .connections{ 
     background-color: white;
     ul{
+        .icon{
+            color:#afafaf;
+            font-size: 20px;
+            margin-left: - 20px;
+        }
         img{
             width: 100%;
         }
@@ -98,11 +103,6 @@ export default {
             text-transform: capitalize;
             font-weight: 600;
         }
-        i{
-            font-size: 20px;
-            color: #afafaf;
-        }
-
     }
         .border-sc{
             border-right: 1px dotted #afafaf;

@@ -39,7 +39,7 @@ export default {
     background-position: center;
     padding: 100px;
     .title{
-        border-radius: 10px;
+        border-radius: 5px;
         background-color: white;
         padding: 40px;
         display: inline-block;
@@ -57,11 +57,12 @@ export default {
             top: -10%;
             right: 50%;
             transform: translateX(50%);
-            padding: 8px 20px;
-            border-radius: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
             font-weight: bold;
             color: white;
-            box-shadow:0px 10px 50px rgb(115, 114, 114);
+            box-shadow: 0px 0px 10px  -5px rgb(95, 94, 94);
+
         }
         .date{
             font-weight: bold;

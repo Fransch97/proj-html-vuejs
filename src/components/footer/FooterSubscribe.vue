@@ -1,7 +1,7 @@
 <template>
   <div class="subscribe d-flex justify-content-center align-items-center text-center">
       <div class="content">
-            <h1 class="py-3">Subscribe & Recive A Free eBook</h1>
+            <h1 class="py-3">Subscribe <a class="org">&</a> Recive A Free eBook</h1>
             <p>Aliquam volutpat. Ut quis ligula a magna bladit finibus. Suspendisse maximus lacus non nunc lacinia lobortis.</p>
 
             <div class="subscripton d-flex align-items-center py-4">
@@ -55,6 +55,9 @@ export default {
     .subscripton{
         width: 80%;
         margin: auto;
+    }
+    .org{ 
+        color: $org-color;
     }
 }
 
