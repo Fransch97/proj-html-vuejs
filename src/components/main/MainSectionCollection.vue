@@ -54,7 +54,7 @@ export default {
     .content{
         .collect-item{
             background-color: white ;
-            width: calc(100% / 4 - 50px);
+            width: calc(100% / 4 - 3%);
             img{
                 width: 33%;
             }
