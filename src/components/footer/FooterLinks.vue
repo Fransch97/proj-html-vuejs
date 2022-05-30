@@ -97,6 +97,7 @@ export default {
         .title{ 
             text-transform: uppercase;
             color: $org-color;
+            font-weight: 600;
 
         }
         .cap{ 
