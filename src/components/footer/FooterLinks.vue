@@ -2,11 +2,11 @@
   <div class="connections py-5  ">
         <div class="container d-flex justify-content-center">
             <ul class="border-sc">
-          <li>
+          <li class="py-4">
               <img src="../../assets/img/avada-food-logo-mob-2x.png" alt="">
           </li>
           <li>
-            <div class="social-advertise">
+            <div class="social-advertise py-4">
               <a href="#"><i class="fab fa-facebook-f "></i> </a>
               <a href="#"><i class="fab fa-instagram mx-3"></i> </a>
               <a href="#"><i class="fab fa-twitter"></i> </a>
@@ -45,11 +45,11 @@
         <li>
             <p class="title"> get our app</p>
         </li>
-        <li>
-            <img src="" alt="">
+        <li class="py-3">
+            <img src="../../assets/img/download-android.png" alt="">
         </li>
         <li>
-            <img src="" alt="">
+            <img src="../../assets/img/download-app-store.png" alt="">
         </li>
         
     </ul>
@@ -80,12 +80,12 @@ export default {
 
 <style lang="scss">
 @import "../../assets/style/global";
-img{
-    // width: 100%;
-}
 .connections{ 
     background-color: white;
     ul{
+        img{
+            width: 100%;
+        }
         list-style: none;
         width: calc(100% / 4);
         padding: 0 60px;
@@ -97,6 +97,10 @@ img{
         .cap{ 
             text-transform: capitalize;
             font-weight: 600;
+        }
+        i{
+            font-size: 20px;
+            color: #afafaf;
         }
 
     }

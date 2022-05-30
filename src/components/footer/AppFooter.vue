@@ -3,6 +3,7 @@
       <FooterSubscribe />
       <FooterImgBanner />
       <FooterLinks />
+      <FooterRights />
   </footer>
 </template>
 
@@ -10,8 +11,9 @@
 import FooterSubscribe from './FooterSubscribe.vue';
 import FooterImgBanner from './FooterImgBanner.vue';
 import FooterLinks from './FooterLinks.vue';
+import FooterRights from './FooterRights.vue';
 export default {
-    components: { FooterSubscribe, FooterImgBanner, FooterLinks }
+    components: { FooterSubscribe, FooterImgBanner, FooterLinks, FooterRights }
 }
 </script>
 
