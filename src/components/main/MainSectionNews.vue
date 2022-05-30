@@ -65,7 +65,7 @@
         <div class="guide position-relative py-4">
           <img src="../../assets/img/singapore-featured-image-400x263.jpg" alt="">
           <h5 class="guide-title">City Guide: Singapore</h5>
-          <span class="btns text-center"><i class="mx-2">icon</i> view all city guides</span>
+          <span class="btns text-center"><font-awesome-icon class="global" icon="fa-solid fa-earth-americas" /> view all city guides</span>
         </div>
         <!-- end guide  -->
 
