@@ -1,9 +1,22 @@
 <template>
   <div class="popular ">
     <div class="intro text-center">
-      <h5>{{pop.title}}</h5>
-      <p>{{pop.text}}</p>
+      <div v-if="admin && !change" class="modify" @click="change = true">
+                <font-awesome-icon icon="fa-solid fa-pencil" />
+            </div>
+            <div v-if="admin && change" class="modify" >
+               <font-awesome-icon icon="fa-solid fa-check" class="px-3" @click="changeIntro()"/>
+               <font-awesome-icon icon="fa-solid fa-circle-xmark" @click="change = false" />
+            </div>
+      <h5 v-if="!change">{{pop.title}}</h5>
+      <input v-model="pop.title" type="text" v-else>
+
+      <p v-if="!change">{{pop.text}}</p>
+      <input v-model="pop.text" type="text" v-else>
     </div>
+
+
+
     <div class="content d-flex">
       <div class="active-card py-3 px-3">
         <div class="img-container ">
@@ -16,13 +29,27 @@
           <img :src="require(`../../assets/img/${activeCardObj.img}.jpg`)" alt="">
         </div>
         <div class="active-content">
-          <h5>{{activeCardObj.title}}</h5>
-          <span class="tags">{{activeCardObj.tags}}</span>
+          
+          <h5 v-if="!change">{{activeCardObj.title}}</h5>
+          <input v-model="activeCardObj.title" type="text" v-else>
+          <span class="tags" v-if="!change">{{activeCardObj.tags}}</span>
+          <input v-model="activeCardObj.tags" type="text" v-else>
           <div class="line my-4"></div>
-          <p>{{activeCardObj.text}}</p>
+          <p v-if="!change">{{activeCardObj.text}}</p>
+          <textarea name="comment" v-model="activeCardObj.text" form="usrform" v-else></textarea>
           <span class="btn-sc">learn more</span>
+          <div v-if="admin && !change" class="modify" @click="change = true">
+               <font-awesome-icon icon="fa-solid fa-pencil" />
+           </div>
+           <div v-if="admin && change" class="modify" >
+              <font-awesome-icon icon="fa-solid fa-check" class="px-3" @click="changeActiveCard(activeCard)"/>
+              <font-awesome-icon icon="fa-solid fa-circle-xmark" @click="change = false" />
+           </div>
         </div>
       </div>
+
+
+
       <div class="items d-flex flex-wrap">
         <div
           v-for="(item, index) in filterItems"
@@ -51,9 +78,13 @@ export default {
       pop:{},
       items:[],
       activeCard: 0,
-      activeCardObj:{}
+      activeCardObj:{},
+      change: false
       
     }
+  },
+  props:{
+    admin: Boolean
   },
   computed:{
     filterItems(){
@@ -74,6 +105,19 @@ export default {
           .then(r=>{ this.pop  = r.data})
 
         },
+        changeIntro(){
+          axios.put("http://localhost:3000/popular/",this.pop)
+          .then(r=>{ console.log(r.data)})
+          axios.get("http://localhost:3000/popular")
+          .then(r=>{ this.pop  = r.data})
+          alert("Fatto!")
+        },
+        changeActiveCard(param){
+          axios.put("http://localhost:3000/popular-items/" + (param +1), this.activeCardObj)
+
+          this.getData()
+          alert("Fatto! ricarica la pagina per il risultato")
+        }
         
     },
 
@@ -102,6 +146,14 @@ export default {
       width: 50%;
         display: flex;
         flex-direction: column;
+        input{
+          width: 100%;
+        }
+        textarea{
+          width: 100%;
+          height: 50%;
+        }
+        
       .active-content{
         background-color: white;
         padding: 40px;

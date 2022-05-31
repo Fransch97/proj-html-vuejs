@@ -21,7 +21,7 @@
         v-for="(link, index) in links" 
         :key="`link-${index}`" 
         >
-            {{link}}
+            {{link.name}}
         </li>
     </ul>
 

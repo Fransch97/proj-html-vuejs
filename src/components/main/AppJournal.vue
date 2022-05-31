@@ -11,15 +11,28 @@
             <div class="img-container ">
               <div class="overlay position-absolute justify-content-center align-items-center flex-column ">
                 <div class="link my-3">
-                    <font-awesome-icon icon="fa-solid fa-link" />
+                  <font-awesome-icon icon="fa-solid fa-link" />
                   </div>
                 <h5>{{journal.title}}</h5>
               </div>
               <img  :src="require(`../../assets/img/${journal.img}.jpg`)" alt="">
             </div>
-            <h4 class="mt-4 ">{{journal.title}}</h4>
-            <span>{{journal.credits}}</span>
-
+            <h4 class="mt-4 " v-if="!change">{{journal.title}}</h4>
+            <a href="#" class="d-block mt-4 " v-if="change">
+              <input v-model="journals[index].title" type="text">
+            </a>
+            <span  v-if="!change">{{journal.credits}}</span>
+             <a href="#" class="d-block mt-4 " v-if="change">
+              <input v-model="journals[index].credits" type="text">
+            </a>
+                  <div v-if="admin && !change" class="modify" @click="change = true">
+                      <font-awesome-icon class="icon" icon="fa-solid fa-pencil" />
+                  </div>
+                  
+                  <div v-if="admin && change" class="modify" >
+                     <font-awesome-icon icon="fa-solid fa-check" @click="changedJournal(index)"/>
+                     <font-awesome-icon icon="fa-solid fa-circle-xmark " class="px-4" @click="change = false" />
+                  </div>
           </div>
            
          </div>
@@ -32,14 +45,27 @@ import axios from "axios"
 export default {
   data() {
     return {
-      journals : []
+      journals : [],
+      change: false
     }
+  },
+  props:{
+    admin : Boolean
   },
   methods: {
     getJournal(){
       axios.get('http://localhost:3000/journal')
       .then(r=>{  this.journals = r.data })
-    }
+    },
+     changedJournal(index){
+        console.log(index)
+        axios.put("http://localhost:3000/journal/" + index ,this.journals[index])
+        .then(r=>{
+          console.log(index)
+            console.log(r)
+            this.getJournal() 
+            alert("Fatto!")
+        }) }
   },
   mounted() {
     this.getJournal()
@@ -47,8 +73,15 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss" >
+.modify{
+  position: absolute;
+  z-index: 102;
+}
+.modify.x{
+  z-index: 102;
+  left: 2%;
+}
 .journal{
   width: 100%;
   .container-sc{

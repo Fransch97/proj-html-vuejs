@@ -8,13 +8,22 @@
     <div class="intro d-flex">
         
         <div class="intro-left">
-          <h5 class="mb-4">{{newsIntro.title}}</h5>
-          <p>{{newsIntro.text}}</p>
+          <h5 v-if="!change" class="mb-4">{{newsIntro.title}}</h5>
+          <input class="d-block" v-model="newsIntro.title" type="text" v-else>
+          <p v-if="!change">{{newsIntro.text}}</p>
+          <input class="d-block" v-model="newsIntro.text" type="text" v-else>
          
+          <div v-if="admin && !change"  @click="change = true">
+            <font-awesome-icon icon="fa-solid fa-pencil" />
+          </div>
+          <div v-if="admin && change"  >
+              <font-awesome-icon icon="fa-solid fa-check" class="px-3" @click="changeNewsIntro"/>
+              <font-awesome-icon icon="fa-solid fa-circle-xmark" @click="change = false" />
+          </div>
         </div>
 
         <div class="intro-right text-end">
-          <span class="btn-sc">read our blog</span>
+          <span class="btn-sc">read our blog <font-awesome-icon icon="fa-solid fa-book-open-reader"  class="mx-2"/></span>
         </div>
     </div> 
     <!--end intro -->
@@ -35,33 +44,63 @@
                 <img :src="require(`../../assets/img/${defaultNews.img}.jpg`)" :alt="defaultNews.title">
               </div>
               <div class="active-content">
-                <h5 >{{defaultNews.title}}</h5>
-                <span class="tags">{{defaultNews.date}}</span>
+                  <div v-if="admin && !changeActive"  @click="changeActive = true">
+                  <font-awesome-icon icon="fa-solid fa-pencil" />
+              </div>
+              <div v-if="admin && changeActive"  >
+                  <font-awesome-icon icon="fa-solid fa-check" class="px-3" @click="changeActivContent"/>
+                  <font-awesome-icon icon="fa-solid fa-circle-xmark" @click="changeActive = false" />
+              </div>
+                <h5 v-if="!changeActive">{{defaultNews.title}}</h5>
+                <input v-model="defaultNews.title" type="text" v-else>
+                <span v-if="!changeActive" class="tags">{{defaultNews.date}}</span>
+                <input v-model="defaultNews.date" type="text" v-else>
                 <div class="line my-4"></div>
-                <p>{{defaultNews.text}}</p>
+                <p v-if="!changeActive">{{defaultNews.text}}</p>
+                <textarea name="comment" v-model="defaultNews.text" form="usrform" v-else></textarea>
                 <div class="d-flex justify-content-between">
-                  <span>Read More > </span>
-                  <i>icon</i>
+                  <span class="read">Read More > </span>
+                  <i>
+                    <font-awesome-icon icon="fa-solid fa-comments" />
+                    <span class="px-1">O</span>
+                  </i>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="all-new d-flex justify-content-between flex-wrap text-center ">
-            <div v-for="news in allnews" :key="`news-${news.id}`" class="news-card pb-5 mb-5">
+          <div class="all-new d-flex justify-content-between flex-wrap text-center position-relative ">
+            <div v-for="(news, index) in allnews" :key="`news-${news.id}`" class="news-card pb-5 mb-5">
             <div class="img-container ">
                 <div class="overlay position-absolute justify-content-center align-items-center flex-column ">
                   <div class="link my-3">
                       <font-awesome-icon icon="fa-solid fa-link" />
-                    </div>
-                  <h5>{{news.title}}</h5>
+                  </div>
+                  <h5 class="py-0">{{news.title}}</h5>
                 </div>
               <img :src="require(`../../assets/img/${news.img}.jpg`)" alt="">
             </div>
-              <h5>{{news.title}}</h5>
-              <span class="tags">{{news.date}}</span>
+              <h5 v-if="!changeItem">{{news.title}}</h5>
+              <input v-model="news.title" type="text" v-else>
+              <span v-if="!changeItem" class="tags d-block">{{news.date}}</span>
+              <input v-model="news.date" type="text" v-else>
+              <div class="like">
+                <div class="icon">
+                  <font-awesome-icon icon="fa-solid fa-heart" @click="addLike(index, news.id)" />
+                </div>
+                <span class="px-2 d-inline-block">{{news.clicks}}</span>
+              </div>
+
+              <div v-if="admin && !changeItem"  @click="changeItem = true">
+              <font-awesome-icon icon="fa-solid fa-pencil" />
+             
+        </div>
+        <div v-if="admin && changeItem"  >
+            <font-awesome-icon icon="fa-solid fa-check" class="px-3" @click="changeNewsItems(news.id)"/>
+            <font-awesome-icon icon="fa-solid fa-circle-xmark" @click="changeItem = false" />
+        </div>
             </div>
-            <span class="more">load more posts</span>
+            <span class="more">load more posts </span>
           </div>
 
       </div>
@@ -73,7 +112,7 @@
         <!-- price -->
         <div class="lastest-recipe py-4 position-relative">
           <img src="../../assets/img/ad-bg.jpg" alt="">
-          <h4 class="text-center">view our latest recipes</h4>
+          <h4 class="text-center">view our latest recipes </h4>
         </div>
         <!--end price -->
 
@@ -142,7 +181,7 @@
         </div>
         <!--end posts table   -->
 
-<blockquote class="twitter-tweet" data-lang="it" data-theme="light"><p lang="en" dir="ltr">Sunsets don&#39;t get much better than this one over <a href="https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw">@GrandTetonNPS</a>. <a href="https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw">#nature</a> <a href="https://twitter.com/hashtag/sunset?src=hash&amp;ref_src=twsrc%5Etfw">#sunset</a> <a href="http://t.co/YuKy2rcjyU">pic.twitter.com/YuKy2rcjyU</a></p>&mdash; US Department of the Interior (@Interior) <a href="https://twitter.com/Interior/status/463440424141459456?ref_src=twsrc%5Etfw">5 maggio 2014</a></blockquote>  
+        <blockquote class="twitter-tweet" data-lang="it" data-theme="light"><p lang="en" dir="ltr">Sunsets don&#39;t get much better than this one over <a href="https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw">@GrandTetonNPS</a>. <a href="https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw">#nature</a> <a href="https://twitter.com/hashtag/sunset?src=hash&amp;ref_src=twsrc%5Etfw">#sunset</a> <a href="http://t.co/YuKy2rcjyU">pic.twitter.com/YuKy2rcjyU</a></p>&mdash; US Department of the Interior (@Interior) <a href="https://twitter.com/Interior/status/463440424141459456?ref_src=twsrc%5Etfw">5 maggio 2014</a></blockquote>  
       </div>
       <!--end right  -->
     </div>
@@ -160,6 +199,9 @@ export default {
       newsDefault: 0,
       newsDefaultObj: {},
       postsTable: "pop",
+      change: false,
+      changeItem: false,
+      changeActive: false,
       popPosts: [
         {
           img : "single-post-img3-66x66",
@@ -183,6 +225,9 @@ export default {
       
     }
   },
+  props:{
+    admin: Boolean
+  },
   computed:{
     defaultNews(){
       return this.newItems[this.newsDefault]
@@ -193,18 +238,65 @@ export default {
   },
     methods: {
       getData(){
-        axios.get("http://localhost:3000/news-left")
+        axios.get("http://localhost:3000/news-left-intro")
           .then(r=>{ 
-            this.newsIntro  = r.data[0]
-            this.newItems  = r.data[1]
+            this.newsIntro  = r.data
             })
-          
+        
+        axios.get("http://localhost:3000/news-left-items")
+          .then(r=>{ 
+            this.newItems  = r.data
+              console.log(this.newItems)
+              this.newItems.sort(function (a, b) {
+                return a.clicks - b.clicks;
+              });
+              this.newItems.reverse()
+              this.popPosts  = [...this.newItems]
+              this.popPosts.length = 3
+            })
+
         },
+
+      changeNewsIntro(){
+        axios.put("http://localhost:3000/news-left-intro/", this.newsIntro)
+        alert("Fatto!")
+
+      },
+      changeActivContent(){
+        axios.put("http://localhost:3000/news-left-items/" + this.newsDefault , this.newItems[this.newsDefault])
+        alert("Fatto!")
+      },
+      changeNewsItems(index){
+        axios.put("http://localhost:3000/news-left-items/" + index, this.newItems[index])
+        alert("Fatto!")
+      },
+      addLike(index, id){
+        this.allnews[index].clicks += 1
+        axios.patch("http://localhost:3000/news-left-items/" + id ,{
+          clicks: this.allnews[index].clicks
+        })
+        .then(r=>{
+          console.log(r)
+          axios.get("http://localhost:3000/news-left-items")
+          .then(r=>{ 
+            this.newItems  = r.data
+              console.log(this.newItems)
+              this.newItems.sort(function (a, b) {
+                return a.clicks - b.clicks;
+              });
+              this.newItems.reverse()
+              this.popPosts  = [...this.newItems]
+              this.popPosts.length = 3
+            })
+        })
+      }
         
     },
 
     mounted() {
       this.getData()
+     
+    
     },
 }
 </script>
@@ -212,6 +304,14 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/style/global";
 @import "../../assets/style/mainSectionNews";
+.icon{
+  transition: 0.1s;
+  cursor: pointer;
+  &:hover{
+    color: red;
+    scale: 1.4;
+  }
+}
 .img-container{
           position: relative;
             &:hover .overlay{
@@ -225,5 +325,17 @@ export default {
             background: linear-gradient(to bottom,  #ff5f029f, #fc7525);
             display: none;
           }
+}
+input{
+          width: 100%;
+        }
+        textarea{
+          width: 100%;
+          height: 50%;
+        }
+.read{
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
 }
 </style>

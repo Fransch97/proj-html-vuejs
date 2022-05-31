@@ -1,9 +1,9 @@
 <template>
   <main class="container">
-  <AppJournal />
-    <MainSectionPopular />
-    <MainSectionCollection />
-    <MainSectionNews />
+    <AppJournal :admin="admin" />
+    <MainSectionPopular :admin="admin"/>
+    <MainSectionCollection :admin="admin"/>
+    <MainSectionNews :admin="admin"/>
 </main>
 </template>
 
@@ -13,7 +13,10 @@ import AppJournal from './AppJournal.vue';
 import MainSectionCollection from './MainSectionCollection.vue'; MainSectionCollection
 import MainSectionNews from './MainSectionNews.vue'; 
 export default {
-    components: { MainSectionPopular, AppJournal, MainSectionCollection, MainSectionNews }
+    components: { MainSectionPopular, AppJournal, MainSectionCollection, MainSectionNews },
+    props:{
+      admin : Boolean
+    }
 }
 </script>
 

@@ -1,216 +1,239 @@
 {
-    "navLinks":[
-        "home",
-        "recipes",
-        "places",
-        "blog",
-        "about",
-        "contact"
-    ],
-    "jambo":{
-        "title":"Food Corner: Top Japanese Restaurants for Sushi",
-        "date" : "March 25, 2019"
+  "navLinks": [
+    {
+      "id": 0,
+      "name": "home"
     },
-    "journal":[
-        {
-            "id": 1,
-            "img" : "single-post-img3-400x263",
-            "title" : "Food Corner: Top Japanese restaurants for Sushi",
-            "credits" : "By admin | March 25th, 2019"
-        },
-        {
-            "id": 2,
-            "img" : "fi-roundup-400x263",
-            "title" : "Roundup: My New Favorite Recipes for Healthy Living",
-            "credits" : "By admin | March 25th, 2019"
-        },
-        {
-            "id": 3,
-            "img" : "fi-toasts-400x263",
-            "title" : "Why These Toasts with Tea are My New Favorite",
-            "credits" : "By admin | March 25th, 2019"
-        }
-    ],
-    "popular":{
-        "title" : "popular recipes",
-        "text" : "Aliquam erat volut. Ut quis ligula a magna blandit finibus, Suspendisse maximus lacus non nunc lacinia lobortis."
+    {
+      "id": 1,
+      "name": "recipes"
     },
-    "popular-items":[
-        {
-            "id": 1,
-            "title" : "Lunch Favourite with Salad, Naan And Beans",
-            "tags" : "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
-            "text" : "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
-            "img" :"Yogurt-Nan-400x263"
-        },
-        {
-            "id": 2,
-            "title" : "Lunch Favourite with Salad, Naan And Beans",
-            "tags" : "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
-            "text" : "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
-            "img" :"Mixed-fruits-400x263"
-        },
-        {
-            "id": 3,
-            "title" : "Lunch Favourite with Salad, Naan And Beans",
-            "tags" : "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
-            "text" : "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
-            "img" :"r-rachel-park-366508-unsplash-min-460x295"
-        },
-        {
-            "id": 4,
-            "title" : "Lunch Favourite with Salad, Naan And Beans",
-            "tags" : "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
-            "text" : "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
-            "img" :"r-michelle-tsang-500721-unsplash-min-460x295"
-        },
-        {
-            "id": 5,
-            "title" : "Lunch Favourite with Salad, Naan And Beans",
-            "tags" : "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
-            "text" : "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
-            "img" :"quick-summer-drink-460x295"
-        },
-        {
-            "id": 6,
-            "title" : "Lunch Favourite with Salad, Naan And Beans",
-            "tags" : "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
-            "text" : "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
-            "img" :"r-maarten-van-den-heuvel-400626-unsplash-min-460x295"
-        },
-        {
-            "id": 7,
-            "title" : "Lunch Favourite with Salad, Naan And Beans",
-            "tags" : "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
-            "text" : "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
-            "img" :"perfect-cosmopolitan-460x295"
-        },
-        {
-            "id": 8,
-            "title" : "Lunch Favourite with Salad, Naan And Beans",
-            "tags" : "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
-            "text" : "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
-            "img" :"fi2x-6-460x295"
-        },
-        {
-            "id": 9,
-            "title" : "Lunch Favourite with Salad, Naan And Beans",
-            "tags" : "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
-            "text" : "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
-            "img" :"r-brooke-lark-96398-unsplash-min-460x295"
-        }
-    ],
-    "collection" : [
-        {
-            "title": "culinary collection",
-            "text" : "Aliquam volutpat. Ut quis ligula a magna bladit finibus. Suspendisse maximus lacus non nunc lacinia lobortis."
-        },
-        [
-            {
-                "img": "drinks-recipes",
-                "name" : "drinks"
-            },
-            {
-                "img": "soups-recipes",
-                "name" : "soups"
-            },
-            {
-                "img": "baking-recipes",
-                "name" : "bakery"
-            },
-            {
-                "img": "dinner-recipes",
-                "name" : "dynner"
-            },
-            {
-                "img": "healthy-recipes",
-                "name" : "healthy"
-            },
-            {
-                "img": "staff-picks",
-                "name" : "staff picks"
-            },
-            {
-                "img": "premium-recipes",
-                "name" : "appetisers"
-            },
-            {
-                "img": "quick-easy-recipes",
-                "name" : "quick & easy"
-            }
-        ]
-    ],
-    "news-left":[
-        {
-            "title" : "farm to table",
-            "text" : "Aliquam volutpat. Ut quis ligula a magna bladit finibus. Suspendisse maximus lacus non nunc lacinia lobortis."
-        },
-        [
-            {
-                "id" : 1,
-                "title": "Food Corner: Top Japanese restaurants for Sushi",
-                "date": "By admin | march 25th, 2019",
-                "text":"Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiant sollicitudin. Integer vitae elementum ex.",
-                "img": "single-post-img3-1200x790",
-                "clicks":127
-            },
-            {
-                "id" : 2,
-                "title": "Roundup: My New Favorite Recipes for Healthy Living",
-                "date": "By admin | march 25th, 2019",
-                "text":"Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiant sollicitudin. Integer vitae elementum ex.",
-                "img": "fi-roundup-600x395",
-                "clicks":23
-
-            },
-            {
-                "id" : 3,
-                "title": "Meal Perp: Korean Bibimbap with Kimchi",
-                "date": "By admin | march 25th, 2019",
-                "text":"Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiant sollicitudin. Integer vitae elementum ex.",
-                "img": "fi-korean-food-600x395",
-                "clicks":21
-            },
-            {
-                "id" : 4,
-                "title": "Why These Toasts with Tea are My New Favorite",
-                "date": "By admin | march 25th, 2019",
-                "text":"Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiant sollicitudin. Integer vitae elementum ex.",
-                "img": "fi-toasts-600x395",
-                "clicks":21
-
-            },
-            {
-                "id" : 5,
-                "title": "Exploring Street Food in Bangkok",
-                "date": "By admin | march 25th, 2019",
-                "text":"Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiant sollicitudin. Integer vitae elementum ex.",
-                "img": "fi-roundup-600x395",
-                "clicks":21
-            },
-            {
-                "id" : 6,
-                "title": "Organic Choices For Healthier Living",
-                "date": "By admin | march 25th, 2019",
-                "text":"Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiant sollicitudin. Integer vitae elementum ex.",
-                "img": "fi-organic-breakfast-600x395",
-                "clicks":21
-
-            },
-            {
-                "id" : 7,
-                "title": "5 Watereside Restaurants in Istanbul for Special Events",
-                "date": "By admin | march 25th, 2019",
-                "text":"Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiant sollicitudin. Integer vitae elementum ex.",
-                "img": "fi-water-side-rest-600x395",
-                "clicks":21
-            }
-
-        ]
-    ],
-    "rights":[
-        "Copyright 2012-2020 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by Wordpress"
-    ]
-
-    
+    {
+      "id": 2,
+      "name": "places"
+    },
+    {
+      "id": 3,
+      "name": "blog"
+    },
+    {
+      "id": 4,
+      "name": "about"
+    },
+    {
+      "id": 5,
+      "name": "contact"
+    }
+  ],
+  "jambo": {
+    "title": "Food Corner: Top Japanese Restaurants for Sushi",
+    "date": "March 25, 2019"
+  },
+  "journal": [
+    {
+      "id": 0,
+      "img": "single-post-img3-400x263",
+      "title": "Food Corner: Top Japanese restaurants for Sushi",
+      "credits": "By admin | March 25th, 2019"
+    },
+    {
+      "id": 1,
+      "img": "fi-roundup-600x395",
+      "title": "Roundup: My New Favorite Recipes for Healthy Living",
+      "credits": "By admin | March 25th, 2019"
+    },
+    {
+      "id": 2,
+      "img": "fi-toasts-400x263",
+      "title": "Why These Toasts with Tea are My New Favorite",
+      "credits": "By admin | March 25th, 2019"
+    }
+  ],
+  "popular": {
+    "title": "popular recipes",
+    "text": "Aliquam erat volut. Ut quis ligula a magna blandit finibus, Suspendisse maximus lacus non nunc lacinia lobortis."
+  },
+  "popular-items": [
+    {
+      "id": 1,
+      "title": "Lunch Favourite with Salad, Naan And Beans",
+      "tags": "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
+      "text": "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
+      "img": "Yogurt-Nan-400x263"
+    },
+    {
+      "id": 2,
+      "title": "Lunch Favourite with Salad, Naan And Beans",
+      "tags": "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
+      "text": "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
+      "img": "Mixed-fruits-400x263"
+    },
+    {
+      "id": 3,
+      "title": "Lunch Favourite with Salad, Naan And Beans",
+      "tags": "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
+      "text": "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
+      "img": "r-rachel-park-366508-unsplash-min-460x295"
+    },
+    {
+      "id": 4,
+      "title": "Lunch Favourite with Salad, Naan And Beans",
+      "tags": "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
+      "text": "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
+      "img": "r-michelle-tsang-500721-unsplash-min-460x295"
+    },
+    {
+      "id": 5,
+      "title": "Lunch Favourite with Salad, Naan And Beans",
+      "tags": "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
+      "text": "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
+      "img": "quick-summer-drink-460x295"
+    },
+    {
+      "id": 6,
+      "title": "Lunch Favourite with Salad, Naan And Beans",
+      "tags": "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
+      "text": "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
+      "img": "r-maarten-van-den-heuvel-400626-unsplash-min-460x295"
+    },
+    {
+      "id": 7,
+      "title": "Lunch Favourite with Salad, Naan And Beans",
+      "tags": "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
+      "text": "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
+      "img": "perfect-cosmopolitan-460x295"
+    },
+    {
+      "id": 8,
+      "title": "Lunch Favourite with Salad, Naan And Beans",
+      "tags": "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
+      "text": "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
+      "img": "fi2x-6-460x295"
+    },
+    {
+      "id": 9,
+      "title": "Lunch Favourite with Salad, Naan And Beans",
+      "tags": "Bakery, Featured Healthy, Latest Recipes, Staff Picks",
+      "text": "Suspendisse at semper odiol. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elemntum ex. Sed porttitor, diam eget convillas volutpat, arcu tellus facilisis nulla, id dignissm orci leo id",
+      "img": "r-brooke-lark-96398-unsplash-min-460x295"
+    }
+  ],
+  "collection": {
+    "title": "culinary collections",
+    "text": "Aliquam volutpat. Ut quis ligula a magna bladit finibus. Suspendisse maximus lacus non nunc lacinia lobortis."
+  },
+  "collection-items": [
+    {
+      "id": 0,
+      "img": "drinks-recipes",
+      "name": "drinks"
+    },
+    {
+      "id": 1,
+      "img": "soups-recipes",
+      "name": "soups"
+    },
+    {
+      "id": 2,
+      "img": "baking-recipes",
+      "name": "bakery"
+    },
+    {
+      "id": 3,
+      "img": "dinner-recipes",
+      "name": "dynner"
+    },
+    {
+      "id": 4,
+      "img": "healthy-recipes",
+      "name": "healthy"
+    },
+    {
+      "id": 5,
+      "img": "staff-picks",
+      "name": "staff picks"
+    },
+    {
+      "id": 6,
+      "img": "premium-recipes",
+      "name": "appetisers"
+    },
+    {
+      "id": 7,
+      "img": "quick-easy-recipes",
+      "name": "quick & easy"
+    }
+  ],
+  "news-left-intro": {
+    "title": "farm to table",
+    "text": "Aliquam volutpat. Ut quis ligula a magna bladit finibus. Suspendisse maximus lacus non nunc lacinia lobortis."
+  },
+  "news-left-items": [
+    {
+      "id": 0,
+      "title": "Food Corner: Top Japanese restaurants for Sushi",
+      "date": "By admin | march 25th, 2019",
+      "text": "Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiant sollicitudin. Integer vitae elementum ex.",
+      "img": "single-post-img3-1200x790",
+      "clicks": 145
+    },
+    {
+      "id": 1,
+      "title": "Roundup: My New Favorite Recipes for Healthy Living",
+      "date": "By admin | march 25th, 2019",
+      "text": "Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiant sollicitudin. Integer vitae elementum ex.",
+      "img": "fi-roundup-600x395",
+      "clicks": 144
+    },
+    {
+      "id": 2,
+      "title": "Meal Perp: Korean Bibimbap with Kimchi",
+      "date": "By admin | march 25th, 2019",
+      "text": "Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiant sollicitudin. Integer vitae elementum ex.",
+      "img": "fi-korean-food-600x395",
+      "clicks": 61
+    },
+    {
+      "id": 3,
+      "title": "Why These Toasts with Tea are My New Favorite",
+      "date": "By admin | march 25th, 2019",
+      "text": "Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiant sollicitudin. Integer vitae elementum ex.",
+      "img": "fi-toasts-600x395",
+      "clicks": 144
+    },
+    {
+      "id": 4,
+      "title": "Exploring Street Food in Bangkok",
+      "date": "By admin | march 25th, 2019",
+      "text": "Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiant sollicitudin. Integer vitae elementum ex.",
+      "img": "fi-street-food-600x395",
+      "clicks": 39
+    },
+    {
+      "id": 5,
+      "title": "Organic Choices For Healthier Living",
+      "date": "By admin | march 25th, 2019",
+      "text": "Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiant sollicitudin. Integer vitae elementum ex.",
+      "img": "fi-organic-breakfast-600x395",
+      "clicks": 40
+    },
+    {
+      "id": 6,
+      "title": "5 Watereside Restaurants in Istanbul for Special Events",
+      "date": "By admin | march 25th, 2019",
+      "text": "Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiant sollicitudin. Integer vitae elementum ex.",
+      "img": "fi-water-side-rest-600x395",
+      "clicks": 139
+    }
+  ],
+  "rights": [
+    "Copyright 2012-2020 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by Wordpress"
+  ],
+  "admin": {
+    "name": "test",
+    "password": "test"
+  },
+  "visitors": {
+    "number": 16
+  }
 }
