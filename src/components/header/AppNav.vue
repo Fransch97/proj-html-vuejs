@@ -10,13 +10,13 @@
             <a href="#" v-if="!change">{{link.name}}</a>
             <a href="#"  v-if="change"><input v-model="links[index].name" type="text"></a>
             <div v-if="admin && !change" class="modify" @click="change = true">
-                <font-awesome-icon icon="fa-solid fa-pencil" />
+                <font-awesome-icon icon="fa-solid fa-pencil"  />
             </div>
-            <div v-if="admin && change" class="modify" @click="changedNav(index)">
+            <div v-if="admin && change" class="modify" @click="changedNav(index)" >
                <font-awesome-icon icon="fa-solid fa-check" />
             </div>
-            <div v-if="admin && change" class="modify x" @click="change = false">
-               <font-awesome-icon icon="fa-solid fa-circle-xmark" />
+            <div v-if="admin && change" class="modify x"  @click="change = false" >
+               <font-awesome-icon icon="fa-solid fa-circle-xmark"/>
             </div>
         </li>
         <li>
@@ -83,6 +83,7 @@ nav{
             }
             .modify.x{
                 right: -40px;
+                width: 20px;
             }
             a{
                 font-weight: 500;
